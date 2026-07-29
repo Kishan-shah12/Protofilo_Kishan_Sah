@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kishan Sah - Computer Science Engineer & Developer</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#3B82F6',
+secondary: '#1E40AF'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Inter', sans-serif;
+scroll-behavior: smooth;
+line-height: 1.6;
+}
+.hero-bg {
+background-image: url('https://readdy.ai/api/search-image?query=modern%20minimalist%20workspace%20with%20computer%20setup%2C%20clean%20desk%20environment%2C%20soft%20natural%20lighting%2C%20professional%20atmosphere%2C%20light%20blue%20and%20white%20color%20scheme%2C%20high-tech%20office%20space%2C%20contemporary%20design%2C%20coding%20environment%2C%20developer%20workspace%2C%20clean%20background&width=1920&height=1080&seq=hero001&orientation=landscape');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+.skill-progress {
+transition: width 2s ease-in-out;
+transform-origin: left;
+}
+.project-card {
+transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+backdrop-filter: blur(10px);
+}
+.project-card:hover {
+transform: translateY(-8px) scale(1.02);
+box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+.download-bg {
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+position: relative;
+overflow: hidden;
+}
+.download-bg::before {
+content: '';
+position: absolute;
+top: -50%;
+left: -50%;
+width: 200%;
+height: 200%;
+background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+animation: rotate 20s linear infinite;
+}
+@keyframes rotate {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.form-input {
+transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+position: relative;
+}
+.form-input:focus {
+transform: translateY(-2px);
+box-shadow: 0 8px 25px rgba(59, 130, 246, 0.15);
+}
+.nav-item {
+position: relative;
+transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav-item::after {
+content: '';
+position: absolute;
+bottom: -4px;
+left: 50%;
+width: 0;
+height: 2px;
+background: #3B82F6;
+transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+transform: translateX(-50%);
+}
+.nav-item:hover::after {
+width: 100%;
+}
+.animate-fade-in {
+animation: fadeIn 1s ease-out;
+}
+@keyframes fadeIn {
+from {
+opacity: 0;
+transform: translateY(30px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+.animate-bounce-slow {
+animation: bounce 3s infinite;
+}
+.glassmorphism {
+background: rgba(255, 255, 255, 0.25);
+backdrop-filter: blur(10px);
+border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.text-gradient {
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+}
+.card-hover-effect {
+transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-hover-effect:hover {
+transform: translateY(-5px);
+box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+.nav-fixed {
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.loading-spinner {
+width: 20px;
+height: 20px;
+border: 2px solid #f3f3f3;
+border-top: 2px solid #3B82F6;
+border-radius: 50%;
+animation: spin 1s linear infinite;
+}
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+.pulse-animation {
+animation: pulse 2s infinite;
+}
+@keyframes pulse {
+0%, 100% { opacity: 1; }
+50% { opacity: 0.7; }
+}
+.slide-in-left {
+animation: slideInLeft 0.6s ease-out;
+}
+@keyframes slideInLeft {
+from { transform: translateX(-100%); opacity: 0; }
+to { transform: translateX(0); opacity: 1; }
+}
+.slide-in-right {
+animation: slideInRight 0.6s ease-out;
+}
+@keyframes slideInRight {
+from { transform: translateX(100%); opacity: 0; }
+to { transform: translateX(0); opacity: 1; }
+}
+.floating-element {
+animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+0%, 100% { transform: translateY(0px); }
+50% { transform: translateY(-20px); }
+}
+.gradient-border {
+background: linear-gradient(white, white) padding-box,
+linear-gradient(135deg, #667eea, #764ba2) border-box;
+border: 2px solid transparent;
+}
+.skill-bar-glow {
+position: relative;
+overflow: hidden;
+}
+.skill-bar-glow::after {
+content: '';
+position: absolute;
+top: 0;
+left: -100%;
+width: 100%;
+height: 100%;
+background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+animation: shimmer 2s infinite;
+}
+@keyframes shimmer {
+0% { left: -100%; }
+100% { left: 100%; }
+}
+.custom-scrollbar {
+scrollbar-width: thin;
+scrollbar-color: #3B82F6 #f1f5f9;
+}
+.custom-scrollbar::-webkit-scrollbar {
+width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+background: #f1f5f9;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+background: #3B82F6;
+border-radius: 3px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+background: #1E40AF;
+}
+.button-glow {
+position: relative;
+overflow: hidden;
+}
+.button-glow::before {
+content: '';
+position: absolute;
+top: -50%;
+left: -50%;
+width: 200%;
+height: 200%;
+background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+transform: scale(0);
+transition: transform 0.3s ease;
+}
+.button-glow:hover::before {
+transform: scale(1);
+}
+.section-divider {
+height: 1px;
+background: linear-gradient(90deg, transparent, #e5e7eb, transparent);
+}
+.toast-enter {
+animation: toastEnter 0.3s ease-out;
+}
+.toast-exit {
+animation: toastExit 0.3s ease-out;
+}
+@keyframes toastEnter {
+from { transform: translateX(100%); opacity: 0; }
+to { transform: translateX(0); opacity: 1; }
+}
+@keyframes toastExit {
+from { transform: translateX(0); opacity: 1; }
+to { transform: translateX(100%); opacity: 0; }
+}
+.reveal-on-scroll {
+opacity: 0;
+transform: translateY(50px);
+transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal-on-scroll.revealed {
+opacity: 1;
+transform: translateY(0);
+}
+.typing-animation {
+border-right: 2px solid #3B82F6;
+animation: blink 1s infinite;
+}
+@keyframes blink {
+0%, 50% { border-right-color: transparent; }
+51%, 100% { border-right-color: #3B82F6; }
+}
+.progress-circle {
+transform: rotate(-90deg);
+transition: stroke-dashoffset 2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.image-zoom {
+overflow: hidden;
+}
+.image-zoom img {
+transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.image-zoom:hover img {
+transform: scale(1.1);
+}
+.parallax-element {
+transform: translateZ(0);
+will-change: transform;
+}
+input:focus, textarea:focus {
+outline: none;
+}
+button {
+cursor: pointer;
+outline: none;
+}
+.cursor-pointer {
+cursor: pointer;
+}
+*::-webkit-scrollbar {
+width: 8px;
+}
+*::-webkit-scrollbar-track {
+background: #f1f5f9;
+}
+*::-webkit-scrollbar-thumb {
+background: #cbd5e1;
+border-radius: 4px;
+}
+*::-webkit-scrollbar-thumb:hover {
+background: #94a3b8;
+}
+@media (max-width: 768px) {
+.hero-bg {
+background-attachment: scroll;
+}
+}
+@media (prefers-reduced-motion: reduce) {
+*,
+*::before,
+*::after {
+animation-duration: 0.01ms !important;
+animation-iteration-count: 1 !important;
+transition-duration: 0.01ms !important;
+scroll-behavior: auto !important;
+}
+}
+</style>
+</head>
+<body class="bg-gray-50 text-gray-900 custom-scrollbar">
+<nav class="fixed w-full top-0 z-50 nav-fixed bg-white/90 backdrop-blur-md shadow-sm">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-16">
+<div class="flex-shrink-0">
+<div class="text-2xl font-bold text-primary cursor-pointer">KS</div>
+</div>
+<div class="hidden md:block">
+<div class="ml-10 flex items-baseline space-x-8">
+<a href="#about" class="nav-item text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium cursor-pointer">About</a>
+<a href="#projects" class="nav-item text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium cursor-pointer">Projects</a>
+<a href="#skills" class="nav-item text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium cursor-pointer">Skills</a>
+<a href="#contact" class="nav-item text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium cursor-pointer">Contact</a>
+<a href="#resume" class="nav-item text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium cursor-pointer">Resume</a>
+</div>
+</div>
+<div class="md:hidden">
+<button id="mobile-menu-btn" class="w-6 h-6 flex items-center justify-center text-gray-700 hover:text-primary cursor-pointer">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+</div>
+</div>
+<div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+<div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+<a href="#about" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary cursor-pointer">About</a>
+<a href="#projects" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary cursor-pointer">Projects</a>
+<a href="#skills" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary cursor-pointer">Skills</a>
+<a href="#contact" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary cursor-pointer">Contact</a>
+<a href="#resume" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary cursor-pointer">Resume</a>
+</div>
+</div>
+</nav>
+<section class="hero-bg min-h-screen flex items-center justify-center relative parallax-element">
+<div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-transparent"></div>
+<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="text-left animate-fade-in reveal-on-scroll">
+<div class="w-32 h-32 rounded-full overflow-hidden mb-8 border-4 border-white shadow-xl image-zoom floating-element">
+<img src="https://readdy.ai/api/search-image?query=professional%20young%20male%20software%20developer%20headshot%2C%20confident%20smile%2C%20modern%20business%20casual%20attire%2C%20clean%20studio%20lighting%2C%20professional%20photography%2C%20computer%20science%20engineer%20portrait%2C%20tech%20industry%20professional&width=400&height=400&seq=profile001&orientation=squarish" alt="Kishan Sah" class="w-full h-full object-cover object-top">
+</div>
+<h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-4 typing-animation">Kishan Sah</h1>
+<p class="text-xl md:text-2xl text-gray-700 mb-8 text-gradient">Computer Science Engineer & Developer</p>
+<p class="text-lg text-gray-600 mb-8 max-w-lg">Passionate about creating innovative solutions through code. Specializing in full-stack development with expertise in modern technologies and frameworks.</p>
+<button class="bg-primary hover:bg-secondary text-white px-8 py-4 !rounded-button font-semibold text-lg transition-all duration-300 hover:shadow-lg hover:scale-105 whitespace-nowrap animate-bounce-slow button-glow cursor-pointer">
+Explore My Work
+</button>
+</div>
+</div>
+</div>
+</section>
+<section id="about" class="py-20 bg-white reveal-on-scroll">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-gray-900 mb-4">About Me</h2>
+<div class="w-24 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="order-2 lg:order-1 slide-in-left">
+<div class="w-full h-96 rounded-2xl overflow-hidden shadow-2xl image-zoom">
+<img src="https://readdy.ai/api/search-image?query=professional%20software%20developer%20working%20at%20computer%2C%20modern%20office%20environment%2C%20coding%20on%20multiple%20monitors%2C%20focused%20concentration%2C%20clean%20workspace%20setup%2C%20natural%20lighting%2C%20tech%20professional%20atmosphere&width=600&height=600&seq=about001&orientation=squarish" alt="Kishan at work" class="w-full h-full object-cover object-top">
+</div>
+</div>
+<div class="order-1 lg:order-2 slide-in-right">
+<h3 class="text-2xl font-semibold text-gray-900 mb-6">Passionate Computer Science Engineer</h3>
+<p class="text-gray-600 mb-6 leading-relaxed">
+I'm a dedicated Computer Science Engineering student with a deep passion for software development and emerging technologies. My journey in programming began during my first year of college, and since then, I've been constantly learning and building projects that solve real-world problems.
+</p>
+<p class="text-gray-600 mb-6 leading-relaxed">
+With expertise in multiple programming languages and frameworks, I enjoy creating efficient, scalable solutions. My goal is to leverage technology to make a positive impact on society while continuously growing as a developer and engineer.
+</p>
+<p class="text-gray-600 mb-8 leading-relaxed">
+When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or mentoring fellow students in their programming journey.
+</p>
+<button id="resume-download-btn" class="bg-primary hover:bg-secondary text-white px-6 py-3 !rounded-button font-medium transition-all duration-300 hover:shadow-lg flex items-center gap-2 whitespace-nowrap button-glow cursor-pointer">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-download-line"></i>
+</div>
+Download Resume
+</button>
+</div>
+</div>
+</div>
+</section>
+<section id="skills" class="py-20 bg-gray-50 reveal-on-scroll">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-gray-900 mb-4">Skills & Expertise</h2>
+<div class="w-24 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 card-hover-effect">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-xl mb-6 pulse-animation">
+<i class="ri-code-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Programming Languages</h3>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700">Java</span>
+<span class="text-gray-500">90%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2 skill-bar-glow">
+<div class="bg-primary h-2 rounded-full skill-progress" style="width: 90%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700">Python</span>
+<span class="text-gray-500">85%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2 skill-bar-glow">
+<div class="bg-primary h-2 rounded-full skill-progress" style="width: 85%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700">C++</span>
+<span class="text-gray-500">80%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2 skill-bar-glow">
+<div class="bg-primary h-2 rounded-full skill-progress" style="width: 80%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 card-hover-effect">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-xl mb-6 pulse-animation">
+<i class="ri-global-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Web Technologies</h3>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700">HTML5 & CSS3</span>
+<span class="text-gray-500">95%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2 skill-bar-glow">
+<div class="bg-primary h-2 rounded-full skill-progress" style="width: 95%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700">JavaScript</span>
+<span class="text-gray-500">88%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2 skill-bar-glow">
+<div class="bg-primary h-2 rounded-full skill-progress" style="width: 88%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700">React.js</span>
+<span class="text-gray-500">82%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2 skill-bar-glow">
+<div class="bg-primary h-2 rounded-full skill-progress" style="width: 82%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 card-hover-effect">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-xl mb-6 pulse-animation">
+<i class="ri-server-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Backend & Database</h3>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700">Node.js</span>
+<span class="text-gray-500">78%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2 skill-bar-glow">
+<div class="bg-primary h-2 rounded-full skill-progress" style="width: 78%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700">MySQL</span>
+<span class="text-gray-500">85%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2 skill-bar-glow">
+<div class="bg-primary h-2 rounded-full skill-progress" style="width: 85%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700">MongoDB</span>
+<span class="text-gray-500">75%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2 skill-bar-glow">
+<div class="bg-primary h-2 rounded-full skill-progress" style="width: 75%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 card-hover-effect">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-xl mb-6 pulse-animation">
+<i class="ri-tools-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Development Tools</h3>
+<div class="flex flex-wrap gap-3">
+<span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm hover:bg-gray-200 transition-colors cursor-pointer">Git</span>
+<span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm hover:bg-gray-200 transition-colors cursor-pointer">VS Code</span>
+<span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm hover:bg-gray-200 transition-colors cursor-pointer">Docker</span>
+<span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm hover:bg-gray-200 transition-colors cursor-pointer">Linux</span>
+<span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm hover:bg-gray-200 transition-colors cursor-pointer">Postman</span>
+<span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm hover:bg-gray-200 transition-colors cursor-pointer">Firebase</span>
+</div>
+</div>
+<div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 card-hover-effect">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-xl mb-6 pulse-animation">
+<i class="ri-smartphone-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Mobile Development</h3>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700">React Native</span>
+<span class="text-gray-500">70%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2 skill-bar-glow">
+<div class="bg-primary h-2 rounded-full skill-progress" style="width: 70%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700">Flutter</span>
+<span class="text-gray-500">65%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2 skill-bar-glow">
+<div class="bg-primary h-2 rounded-full skill-progress" style="width: 65%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 card-hover-effect">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-xl mb-6 pulse-animation">
+<i class="ri-brain-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Emerging Technologies</h3>
+<div class="flex flex-wrap gap-3">
+<span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm hover:bg-gray-200 transition-colors cursor-pointer">Machine Learning</span>
+<span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm hover:bg-gray-200 transition-colors cursor-pointer">AI/ML</span>
+<span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm hover:bg-gray-200 transition-colors cursor-pointer">Data Science</span>
+<span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm hover:bg-gray-200 transition-colors cursor-pointer">Cloud Computing</span>
+<span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm hover:bg-gray-200 transition-colors cursor-pointer">DevOps</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="projects" class="py-20 bg-white reveal-on-scroll">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+<div class="w-24 h-1 bg-primary mx-auto mb-8"></div>
+<div class="flex justify-center gap-4 flex-wrap">
+<button class="filter-btn bg-primary text-white px-4 py-2 !rounded-button font-medium whitespace-nowrap cursor-pointer button-glow" data-filter="all">All Projects</button>
+<button class="filter-btn bg-gray-200 text-gray-700 hover:bg-gray-300 px-4 py-2 !rounded-button font-medium whitespace-nowrap cursor-pointer" data-filter="web">Web Development</button>
+<button class="filter-btn bg-gray-200 text-gray-700 hover:bg-gray-300 px-4 py-2 !rounded-button font-medium whitespace-nowrap cursor-pointer" data-filter="mobile">Mobile Apps</button>
+<button class="filter-btn bg-gray-200 text-gray-700 hover:bg-gray-300 px-4 py-2 !rounded-button font-medium whitespace-nowrap cursor-pointer" data-filter="ai">AI/ML</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="project-card bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer" data-category="web">
+<div class="h-48 overflow-hidden image-zoom">
+<img src="https://readdy.ai/api/search-image?query=modern%20e-commerce%20website%20interface%2C%20clean%20product%20catalog%20design%2C%20shopping%20cart%20functionality%2C%20responsive%20web%20design%2C%20professional%20online%20store%20layout%2C%20blue%20and%20white%20color%20scheme&width=600&height=400&seq=project001&orientation=landscape" alt="E-commerce Platform" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold text-gray-900 mb-3">E-commerce Platform</h3>
+<p class="text-gray-600 mb-4">Full-stack e-commerce solution with React frontend and Node.js backend, featuring user authentication, payment integration, and admin dashboard.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">React</span>
+<span class="px-2 py-1 bg-green-100 text-green-800 rounded text-xs">Node.js</span>
+<span class="px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs">MongoDB</span>
+</div>
+<div class="flex gap-3">
+<a href="#" class="flex items-center gap-2 text-primary hover:text-secondary font-medium cursor-pointer">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-external-link-line"></i>
+</div>
+Live Demo
+</a>
+<a href="#" class="flex items-center gap-2 text-gray-600 hover:text-gray-800 font-medium cursor-pointer">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-github-line"></i>
+</div>
+GitHub
+</a>
+</div>
+</div>
+</div>
+<div class="project-card bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer" data-category="mobile">
+<div class="h-48 overflow-hidden image-zoom">
+<img src="https://readdy.ai/api/search-image?query=mobile%20fitness%20tracking%20app%20interface%2C%20health%20monitoring%20dashboard%2C%20workout%20tracking%20screens%2C%20modern%20mobile%20UI%20design%2C%20fitness%20app%20mockup%2C%20clean%20interface%20design&width=600&height=400&seq=project002&orientation=landscape" alt="Fitness Tracker App" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Fitness Tracker App</h3>
+<p class="text-gray-600 mb-4">Cross-platform mobile app built with React Native for tracking workouts, nutrition, and health metrics with real-time data synchronization.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">React Native</span>
+<span class="px-2 py-1 bg-orange-100 text-orange-800 rounded text-xs">Firebase</span>
+<span class="px-2 py-1 bg-red-100 text-red-800 rounded text-xs">Redux</span>
+</div>
+<div class="flex gap-3">
+<a href="#" class="flex items-center gap-2 text-primary hover:text-secondary font-medium cursor-pointer">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-external-link-line"></i>
+</div>
+Live Demo
+</a>
+<a href="#" class="flex items-center gap-2 text-gray-600 hover:text-gray-800 font-medium cursor-pointer">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-github-line"></i>
+</div>
+GitHub
+</a>
+</div>
+</div>
+</div>
+<div class="project-card bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer" data-category="ai">
+<div class="h-48 overflow-hidden image-zoom">
+<img src="https://readdy.ai/api/search-image?query=machine%20learning%20data%20visualization%20dashboard%2C%20AI%20analytics%20interface%2C%20predictive%20modeling%20charts%2C%20data%20science%20workspace%2C%20neural%20network%20visualization%2C%20modern%20tech%20interface&width=600&height=400&seq=project003&orientation=landscape" alt="AI Recommendation System" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold text-gray-900 mb-3">AI Recommendation System</h3>
+<p class="text-gray-600 mb-4">Machine learning powered recommendation engine using collaborative filtering and content-based algorithms for personalized user experiences.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded text-xs">Python</span>
+<span class="px-2 py-1 bg-indigo-100 text-indigo-800 rounded text-xs">TensorFlow</span>
+<span class="px-2 py-1 bg-pink-100 text-pink-800 rounded text-xs">Pandas</span>
+</div>
+<div class="flex gap-3">
+<a href="#" class="flex items-center gap-2 text-primary hover:text-secondary font-medium cursor-pointer">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-external-link-line"></i>
+</div>
+Live Demo
+</a>
+<a href="#" class="flex items-center gap-2 text-gray-600 hover:text-gray-800 font-medium cursor-pointer">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-github-line"></i>
+</div>
+GitHub
+</a>
+</div>
+</div>
+</div>
+<div class="project-card bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer" data-category="web">
+<div class="h-48 overflow-hidden image-zoom">
+<img src="https://readdy.ai/api/search-image?query=task%20management%20web%20application%20interface%2C%20project%20collaboration%20dashboard%2C%20team%20productivity%20tools%2C%20modern%20web%20app%20design%2C%20kanban%20board%20layout%2C%20clean%20business%20interface&width=600&height=400&seq=project004&orientation=landscape" alt="Task Management System" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Task Management System</h3>
+<p class="text-gray-600 mb-4">Collaborative project management tool with real-time updates, team collaboration features, and advanced reporting capabilities.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">Vue.js</span>
+<span class="px-2 py-1 bg-green-100 text-green-800 rounded text-xs">Express.js</span>
+<span class="px-2 py-1 bg-gray-100 text-gray-800 rounded text-xs">Socket.io</span>
+</div>
+<div class="flex gap-3">
+<a href="#" class="flex items-center gap-2 text-primary hover:text-secondary font-medium cursor-pointer">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-external-link-line"></i>
+</div>
+Live Demo
+</a>
+<a href="#" class="flex items-center gap-2 text-gray-600 hover:text-gray-800 font-medium cursor-pointer">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-github-line"></i>
+</div>
+GitHub
+</a>
+</div>
+</div>
+</div>
+<div class="project-card bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer" data-category="mobile">
+<div class="h-48 overflow-hidden image-zoom">
+<img src="https://readdy.ai/api/search-image?query=weather%20forecast%20mobile%20app%20interface%2C%20climate%20data%20visualization%2C%20weather%20tracking%20screens%2C%20modern%20mobile%20weather%20app%20design%2C%20meteorology%20dashboard%2C%20clean%20app%20interface&width=600&height=400&seq=project005&orientation=landscape" alt="Weather Forecast App" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Weather Forecast App</h3>
+<p class="text-gray-600 mb-4">Beautiful weather app with location-based forecasts, interactive maps, and detailed weather analytics using multiple weather APIs.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-1 bg-cyan-100 text-cyan-800 rounded text-xs">Flutter</span>
+<span class="px-2 py-1 bg-teal-100 text-teal-800 rounded text-xs">Dart</span>
+<span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">REST API</span>
+</div>
+<div class="flex gap-3">
+<a href="#" class="flex items-center gap-2 text-primary hover:text-secondary font-medium cursor-pointer">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-external-link-line"></i>
+</div>
+Live Demo
+</a>
+<a href="#" class="flex items-center gap-2 text-gray-600 hover:text-gray-800 font-medium cursor-pointer">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-github-line"></i>
+</div>
+GitHub
+</a>
+</div>
+</div>
+</div>
+<div class="project-card bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer" data-category="ai">
+<div class="h-48 overflow-hidden image-zoom">
+<img src="https://readdy.ai/api/search-image?query=chatbot%20interface%20design%2C%20AI%20conversation%20system%2C%20natural%20language%20processing%20dashboard%2C%20intelligent%20chat%20application%2C%20modern%20AI%20interface%2C%20conversational%20AI%20design&width=600&height=400&seq=project006&orientation=landscape" alt="Smart Chatbot" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Smart Chatbot</h3>
+<p class="text-gray-600 mb-4">Intelligent conversational AI chatbot with natural language processing capabilities and integration with multiple messaging platforms.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded text-xs">Python</span>
+<span class="px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs">NLP</span>
+<span class="px-2 py-1 bg-green-100 text-green-800 rounded text-xs">FastAPI</span>
+</div>
+<div class="flex gap-3">
+<a href="#" class="flex items-center gap-2 text-primary hover:text-secondary font-medium cursor-pointer">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-external-link-line"></i>
+</div>
+Live Demo
+</a>
+<a href="#" class="flex items-center gap-2 text-gray-600 hover:text-gray-800 font-medium cursor-pointer">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-github-line"></i>
+</div>
+GitHub
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="resume" class="py-20 download-bg reveal-on-scroll">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h2 class="text-4xl font-bold text-white mb-4">Download My Portfolio</h2>
+<p class="text-xl text-white/90 mb-12">Get a comprehensive overview of my skills, projects, and experience in different formats</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+<div class="glassmorphism rounded-2xl p-6 card-hover-effect">
+<div class="w-16 h-16 flex items-center justify-center bg-white/20 rounded-xl mx-auto mb-4 floating-element">
+<i class="ri-file-pdf-line ri-2x text-white"></i>
+</div>
+<h3 class="text-xl font-semibold text-white mb-2">PDF Resume</h3>
+<p class="text-white/80 mb-4 text-sm">Perfect for printing and ATS systems</p>
+<p class="text-white/60 text-xs mb-4">Size: 245 KB | Last Updated: Dec 15, 2024</p>
+<button id="download-pdf-btn" class="w-full bg-white text-primary hover:bg-gray-100 px-4 py-2 !rounded-button font-medium transition-all duration-300 whitespace-nowrap flex items-center justify-center gap-2 button-glow cursor-pointer">
+<span>Download PDF</span>
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-download-line"></i>
+</div>
+</button>
+</div>
+<div class="glassmorphism rounded-2xl p-6 card-hover-effect">
+<div class="w-16 h-16 flex items-center justify-center bg-white/20 rounded-xl mx-auto mb-4 floating-element">
+<i class="ri-smartphone-line ri-2x text-white"></i>
+</div>
+<h3 class="text-xl font-semibold text-white mb-2">Mobile Version</h3>
+<p class="text-white/80 mb-4 text-sm">Optimized for mobile viewing</p>
+<p class="text-white/60 text-xs mb-4">Size: 180 KB | Last Updated: Dec 15, 2024</p>
+<button id="download-mobile-btn" class="w-full bg-white text-primary hover:bg-gray-100 px-4 py-2 !rounded-button font-medium transition-all duration-300 whitespace-nowrap button-glow cursor-pointer">
+Download Mobile
+</button>
+</div>
+<div class="glassmorphism rounded-2xl p-6 card-hover-effect">
+<div class="w-16 h-16 flex items-center justify-center bg-white/20 rounded-xl mx-auto mb-4 floating-element">
+<i class="ri-computer-line ri-2x text-white"></i>
+</div>
+<h3 class="text-xl font-semibold text-white mb-2">Interactive Version</h3>
+<p class="text-white/80 mb-4 text-sm">Full interactive portfolio experience</p>
+<p class="text-white/60 text-xs mb-4">Online | Last Updated: Dec 15, 2024</p>
+<button class="w-full bg-white text-primary hover:bg-gray-100 px-4 py-2 !rounded-button font-medium transition-all duration-300 whitespace-nowrap button-glow cursor-pointer">
+View Online
+</button>
+</div>
+</div>
+<div class="glassmorphism rounded-2xl p-8 card-hover-effect">
+<div class="flex items-center justify-center gap-4 mb-6">
+<div class="w-12 h-12 flex items-center justify-center bg-white/20 rounded-full floating-element">
+<i class="ri-download-cloud-line ri-xl text-white"></i>
+</div>
+<div class="text-left">
+<h3 class="text-2xl font-bold text-white">Complete Portfolio Package</h3>
+<p class="text-white/80">All formats included in one download</p>
+</div>
+</div>
+<div class="flex items-center justify-center gap-8 mb-6 text-white/80">
+<div class="text-center">
+<div id="download-count" class="text-2xl font-bold text-white">1,247</div>
+<div class="text-sm">Total Downloads</div>
+</div>
+<div class="text-center">
+<div class="text-2xl font-bold text-white">4.9★</div>
+<div class="text-sm">Average Rating</div>
+</div>
+<div class="text-center">
+<div class="text-2xl font-bold text-white">520 KB</div>
+<div class="text-sm">Package Size</div>
+</div>
+</div>
+<button id="download-package-btn" class="bg-white text-primary hover:bg-gray-100 px-8 py-3 !rounded-button font-semibold text-lg transition-all duration-300 hover:shadow-lg whitespace-nowrap button-glow cursor-pointer">
+Download Complete Package
+</button>
+</div>
+</div>
+</section>
+<section id="contact" class="py-20 bg-gray-50 reveal-on-scroll">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+<div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+<p class="text-xl text-gray-600">Let's discuss opportunities and collaborate on exciting projects</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<div class="slide-in-left">
+<h3 class="text-2xl font-semibold text-gray-900 mb-6">Let's Start a Conversation</h3>
+<p class="text-gray-600 mb-8">I'm always interested in hearing about new opportunities, interesting projects, or just having a chat about technology and development.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4 card-hover-effect p-4 rounded-xl">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-xl pulse-animation">
+<i class="ri-mail-line ri-xl text-primary"></i>
+</div>
+<div>
+<div class="font-semibold text-gray-900">Email</div>
+<div class="text-gray-600">kishan.sah@example.com</div>
+</div>
+</div>
+<div class="flex items-center gap-4 card-hover-effect p-4 rounded-xl">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-xl pulse-animation">
+<i class="ri-phone-line ri-xl text-primary"></i>
+</div>
+<div>
+<div class="font-semibold text-gray-900">Phone</div>
+<div class="text-gray-600">+91 98765 43210</div>
+</div>
+</div>
+<div class="flex items-center gap-4 card-hover-effect p-4 rounded-xl">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-xl pulse-animation">
+<i class="ri-map-pin-line ri-xl text-primary"></i>
+</div>
+<div>
+<div class="font-semibold text-gray-900">Location</div>
+<div class="text-gray-600">Mumbai, Maharashtra, India</div>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<h4 class="text-lg font-semibold text-gray-900 mb-4">Connect with me</h4>
+<div class="flex gap-4">
+<a href="https://www.linkedin.com/in/kishan-sah-b97a73315?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center bg-primary hover:bg-secondary text-white rounded-full transition-all duration-300 floating-element cursor-pointer">
+<i class="ri-linkedin-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-gray-900 text-white rounded-full transition-all duration-300 floating-element cursor-pointer">
+<i class="ri-github-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-blue-500 hover:bg-blue-600 text-white rounded-full transition-all duration-300 floating-element cursor-pointer">
+<i class="ri-twitter-fill"></i>
+</a>
+<a href="https://www.instagram.com/kishansah574?utm_source=qr" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center bg-red-500 hover:bg-red-600 text-white rounded-full transition-all duration-300 floating-element cursor-pointer">
+<i class="ri-instagram-fill"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-2xl shadow-lg card-hover-effect slide-in-right">
+<form id="contact-form">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+<input type="text" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none text-sm" placeholder="John" required>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+<input type="text" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none text-sm" placeholder="Doe" required>
+</div>
+</div>
+<div class="mb-6">
+<label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+<input type="email" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none text-sm" placeholder="john.doe@example.com" required>
+</div>
+<div class="mb-6">
+<label class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+<input type="text" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none text-sm" placeholder="Project Collaboration" required>
+</div>
+<div class="mb-6">
+<label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+<textarea rows="5" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none resize-none text-sm" placeholder="Tell me about your project or how we can work together..." required></textarea>
+</div>
+<button type="submit" class="w-full bg-primary hover:bg-secondary text-white px-6 py-3 !rounded-button font-semibold transition-all duration-300 hover:shadow-lg whitespace-nowrap button-glow cursor-pointer">
+Send Message
+</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-gray-900 text-white py-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="col-span-1 md:col-span-2">
+<div class="text-3xl font-bold text-primary mb-4 cursor-pointer">KS</div>
+<p class="text-gray-400 mb-6 max-w-md">Computer Science Engineer passionate about creating innovative solutions through code. Always learning, always building.</p>
+<div class="flex gap-4">
+<a href="https://www.linkedin.com/in/kishan-sah-b97a73315?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-primary text-white rounded-full transition-all duration-300 cursor-pointer floating-element">
+<i class="ri-linkedin-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-primary text-white rounded-full transition-all duration-300 cursor-pointer floating-element">
+<i class="ri-github-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-primary text-white rounded-full transition-all duration-300 cursor-pointer floating-element">
+<i class="ri-twitter-fill"></i>
+</a>
+<a href="https://www.instagram.com/kishansah574?utm_source=qr" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-primary text-white rounded-full transition-all duration-300 cursor-pointer floating-element">
+<i class="ri-instagram-fill"></i>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+<ul class="space-y-2">
+<li><a href="#about" class="text-gray-400 hover:text-white transition-colors cursor-pointer">About Me</a></li>
+<li><a href="#projects" class="text-gray-400 hover:text-white transition-colors cursor-pointer">Projects</a></li>
+<li><a href="#skills" class="text-gray-400 hover:text-white transition-colors cursor-pointer">Skills</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white transition-colors cursor-pointer">Contact</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Services</h3>
+<ul class="space-y-2">
+<li><span class="text-gray-400">Web Development</span></li>
+<li><span class="text-gray-400">Mobile Apps</span></li>
+<li><span class="text-gray-400">AI/ML Solutions</span></li>
+<li><span class="text-gray-400">Consulting</span></li>
+</ul>
+</div>
+</div>
+<div class="section-divider mt-8 mb-8"></div>
+<div class="flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm">© 2024 Kishan Sah. All rights reserved.</p>
+<button id="back-to-top" class="mt-4 md:mt-0 flex items-center gap-2 text-gray-400 hover:text-white transition-colors cursor-pointer floating-element">
+<span class="text-sm">Back to Top</span>
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-arrow-up-line"></i>
+</div>
+</button>
+</div>
+</div>
+</footer>
+<div id="toast-container" class="fixed bottom-4 right-4 z-50"></div>
+<script id="toast-script">
+document.addEventListener('DOMContentLoaded', function() {
+function showToast(message, type = 'success') {
+const toast = document.createElement('div');
+toast.className = `flex items-center gap-3 mb-3 p-4 rounded-lg text-white toast-enter ${type === 'success' ? 'bg-green-500' : type === 'info' ? 'bg-blue-500' : 'bg-red-500'}`;
+const icon = document.createElement('div');
+icon.className = 'w-5 h-5 flex items-center justify-center';
+icon.innerHTML = `<i class="ri-${type === 'success' ? 'check-line' : 'error-warning-line'}"></i>`;
+const text = document.createElement('div');
+text.className = 'flex-1';
+text.textContent = message;
+const closeBtn = document.createElement('button');
+closeBtn.className = 'w-5 h-5 flex items-center justify-center hover:bg-white/20 rounded cursor-pointer';
+closeBtn.innerHTML = '<i class="ri-close-line ri-sm"></i>';
+closeBtn.addEventListener('click', function() {
+removeToast(toast);
+});
+toast.appendChild(icon);
+toast.appendChild(text);
+toast.appendChild(closeBtn);
+const container = document.getElementById('toast-container');
+container.appendChild(toast);
+setTimeout(() => {
+removeToast(toast);
+}, 5000);
+}
+function removeToast(toast) {
+if (toast && toast.parentNode) {
+toast.className = toast.className.replace('toast-enter', 'toast-exit');
+setTimeout(() => {
+if (toast.parentNode) {
+toast.parentNode.removeChild(toast);
+}
+}, 300);
+}
+}
+window.showToast = showToast;
+});
+</script>
+<script id="download-script">
+document.addEventListener('DOMContentLoaded', function() {
+function handleDownload(btn, fileName, successMessage) {
+const originalContent = btn.innerHTML;
+btn.innerHTML = `
+<div class="flex items-center gap-2">
+<div class="loading-spinner"></div>
+<span>Downloading...</span>
+</div>
+`;
+btn.disabled = true;
+setTimeout(() => {
+const link = document.createElement('a');
+link.href = '#';
+link.download = fileName;
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+btn.innerHTML = originalContent;
+btn.disabled = false;
+showToast(successMessage);
+}, 1500);
+}
+function handlePackageDownload() {
+const btn = document.getElementById('download-package-btn');
+const downloadCount = document.getElementById('download-count');
+const originalContent = btn.innerHTML;
+btn.innerHTML = `
+<div class="flex items-center gap-2">
+<div class="loading-spinner border-white border-t-transparent"></div>
+<span>Preparing package...</span>
+</div>
+`;
+btn.disabled = true;
+setTimeout(() => {
+const link = document.createElement('a');
+link.href = '#';
+link.download = 'Kishan_Sah_Complete_Portfolio.zip';
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+btn.innerHTML = originalContent;
+btn.disabled = false;
+const currentCount = parseInt(downloadCount.textContent.replace(/,/g, ''));
+downloadCount.textContent = (currentCount + 1).toLocaleString();
+showToast('Complete portfolio package downloaded successfully! Thank you for your interest.', 'success');
+}, 2500);
+}
+const downloadPdfBtn = document.getElementById('download-pdf-btn');
+const downloadMobileBtn = document.getElementById('download-mobile-btn');
+const downloadPackageBtn = document.getElementById('download-package-btn');
+downloadPdfBtn.addEventListener('click', function() {
+handleDownload(this, 'Kishan_Sah_Resume.pdf', 'Resume downloaded successfully!');
+});
+downloadMobileBtn.addEventListener('click', function() {
+handleDownload(this, 'Kishan_Sah_Mobile_Resume.pdf', 'Mobile resume downloaded successfully!');
+});
+downloadPackageBtn.addEventListener('click', handlePackageDownload);
+});
+</script>
+<script id="navigation-script">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const nav = document.querySelector('nav');
+let isMenuOpen = false;
+mobileMenuBtn.addEventListener('click', function() {
+isMenuOpen = !isMenuOpen;
+mobileMenu.classList.toggle('hidden');
+const icon = this.querySelector('i');
+if (isMenuOpen) {
+icon.className = 'ri-close-line ri-lg';
+} else {
+icon.className = 'ri-menu-line ri-lg';
+}
+});
+window.addEventListener('scroll', function() {
+if (window.scrollY > 50) {
+nav.classList.add('shadow-md');
+nav.classList.remove('shadow-sm');
+} else {
+nav.classList.add('shadow-sm');
+nav.classList.remove('shadow-md');
+}
+});
+const navLinks = document.querySelectorAll('a[href^="#"]');
+navLinks.forEach(link => {
+link.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href').substring(1);
+const targetElement = document.getElementById(targetId);
+if (targetElement) {
+const offsetTop = targetElement.offsetTop - 80;
+window.scrollTo({
+top: offsetTop,
+behavior: 'smooth'
+});
+}
+if (!mobileMenu.classList.contains('hidden')) {
+mobileMenu.classList.add('hidden');
+isMenuOpen = false;
+const icon = mobileMenuBtn.querySelector('i');
+icon.className = 'ri-menu-line ri-lg';
+}
+});
+});
+});
+</script>
+<script id="project-filter-script">
+document.addEventListener('DOMContentLoaded', function() {
+const filterBtns = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+filterBtns.forEach(btn => {
+btn.addEventListener('click', function() {
+const filter = this.getAttribute('data-filter');
+filterBtns.forEach(b => {
+b.classList.remove('bg-primary', 'text-white');
+b.classList.add('bg-gray-200', 'text-gray-700');
+});
+this.classList.remove('bg-gray-200', 'text-gray-700');
+this.classList.add('bg-primary', 'text-white');
+projectCards.forEach((card, index) => {
+if (filter === 'all' || card.getAttribute('data-category') === filter) {
+card.style.display = 'block';
+card.style.animation = `fadeIn 0.5s ease-in-out ${index * 0.1}s both`;
+} else {
+card.style.display = 'none';
+}
+});
+});
+});
+});
+</script>
+<script id="contact-form-script">
+document.addEventListener('DOMContentLoaded', function() {
+const contactForm = document.getElementById('contact-form');
+contactForm.addEventListener('submit', function(e) {
+e.preventDefault();
+const submitBtn = this.querySelector('button[type="submit"]');
+const originalText = submitBtn.innerHTML;
+submitBtn.innerHTML = `
+<div class="flex items-center gap-2">
+<div class="loading-spinner border-white border-t-transparent"></div>
+<span>Sending...</span>
+</div>
+`;
+submitBtn.disabled = true;
+setTimeout(() => {
+showToast('Thank you for your message! I\'ll get back to you soon.', 'success');
+this.reset();
+submitBtn.innerHTML = originalText;
+submitBtn.disabled = false;
+}, 2000);
+});
+});
+</script>
+<script id="back-to-top-script">
+document.addEventListener('DOMContentLoaded', function() {
+const backToTopBtn = document.getElementById('back-to-top');
+backToTopBtn.addEventListener('click', function() {
+window.scrollTo({
+top: 0,
+behavior: 'smooth'
+});
+});
+window.addEventListener('scroll', function() {
+if (window.scrollY > 300) {
+backToTopBtn.style.opacity = '1';
+backToTopBtn.style.visibility = 'visible';
+} else {
+backToTopBtn.style.opacity = '0.5';
+backToTopBtn.style.visibility = 'visible';
+}
+});
+});
+</script>
+<script id="skill-animation-script">
+document.addEventListener('DOMContentLoaded', function() {
+const skillBars = document.querySelectorAll('.skill-progress');
+const skillSection = document.getElementById('skills');
+let skillsAnimated = false;
+const animateSkills = () => {
+if (skillsAnimated) return;
+const rect = skillSection.getBoundingClientRect();
+if (rect.top < window.innerHeight && rect.bottom > 0) {
+skillBars.forEach((bar, index) => {
+setTimeout(() => {
+bar.style.width = bar.style.width;
+bar.style.animation = 'none';
+bar.offsetHeight;
+bar.style.animation = null;
+}, index * 200);
+});
+skillsAnimated = true;
+}
+};
+window.addEventListener('scroll', animateSkills);
+animateSkills();
+});
+</script>
+<script id="hero-cta-script">
+document.addEventListener('DOMContentLoaded', function() {
+const ctaBtn = document.querySelector('.animate-bounce-slow');
+if (ctaBtn) {
+ctaBtn.addEventListener('click', function() {
+const projectsSection = document.getElementById('projects');
+if (projectsSection) {
+const offsetTop = projectsSection.offsetTop - 80;
+window.scrollTo({
+top: offsetTop,
+behavior: 'smooth'
+});
+}
+});
+}
+});
+</script>
+<script id="resume-download-script">
+document.addEventListener('DOMContentLoaded', function() {
+const resumeDownloadBtn = document.getElementById('resume-download-btn');
+if (resumeDownloadBtn) {
+resumeDownloadBtn.addEventListener('click', function() {
+const originalContent = this.innerHTML;
+this.innerHTML = `
+<div class="flex items-center gap-2">
+<div class="loading-spinner border-white border-t-transparent"></div>
+<span>Downloading...</span>
+</div>
+`;
+this.disabled = true;
+setTimeout(() => {
+const link = document.createElement('a');
+link.href = '#';
+link.download = 'Kishan_Sah_Resume.pdf';
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+this.innerHTML = originalContent;
+this.disabled = false;
+if (window.showToast) {
+window.showToast('Resume downloaded successfully!', 'success');
+}
+}, 1500);
+});
+}
+});
+</script>
+<script id="scroll-reveal-script">
+document.addEventListener('DOMContentLoaded', function() {
+const observerOptions = {
+threshold: 0.1,
+rootMargin: '0px 0px -50px 0px'
+};
+const observer = new IntersectionObserver(function(entries) {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('revealed');
+observer.unobserve(entry.target);
+}
+});
+}, observerOptions);
+const revealElements = document.querySelectorAll('.reveal-on-scroll');
+revealElements.forEach(el => {
+observer.observe(el);
+});
+});
+</script>
+<script id="parallax-script">
+document.addEventListener('DOMContentLoaded', function() {
+const parallaxElements = document.querySelectorAll('.parallax-element');
+function updateParallax() {
+const scrolled = window.pageYOffset;
+parallaxElements.forEach(element => {
+const rate = scrolled * -0.5;
+element.style.transform = `translate3d(0, ${rate}px, 0)`;
+});
+}
+let ticking = false;
+function requestTick() {
+if (!ticking) {
+requestAnimationFrame(updateParallax);
+ticking = true;
+}
+}
+window.addEventListener('scroll', function() {
+requestTick();
+ticking = false;
+});
+});
+</script>
+</body>
+</html>
