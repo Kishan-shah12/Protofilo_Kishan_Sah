@@ -1036,7 +1036,7 @@ btn.innerHTML = `
 btn.disabled = true;
 setTimeout(() => {
 const link = document.createElement('a');
-link.href = '#';
+link.href = fileName;
 link.download = fileName;
 document.body.appendChild(link);
 link.click();
@@ -1075,7 +1075,7 @@ const downloadPdfBtn = document.getElementById('download-pdf-btn');
 const downloadMobileBtn = document.getElementById('download-mobile-btn');
 const downloadPackageBtn = document.getElementById('download-package-btn');
 downloadPdfBtn.addEventListener('click', function() {
-handleDownload(this, 'Kishan_Sah_Resume.pdf', 'Resume downloaded successfully!');
+handleDownload(this, 'Kishan_Sah_Full_Resume.pdf', 'Resume downloaded successfully!');
 });
 downloadMobileBtn.addEventListener('click', function() {
 handleDownload(this, 'Kishan_Sah_Mobile_Resume.pdf', 'Mobile resume downloaded successfully!');
@@ -1255,8 +1255,8 @@ this.innerHTML = `
 this.disabled = true;
 setTimeout(() => {
 const link = document.createElement('a');
-link.href = '#';
-link.download = 'Kishan_Sah_Resume.pdf';
+link.href = 'Kishan_Sah_Full_Resume.pdf';
+link.download = 'Kishan_Sah_Full_Resume.pdf';
 document.body.appendChild(link);
 link.click();
 document.body.removeChild(link);
