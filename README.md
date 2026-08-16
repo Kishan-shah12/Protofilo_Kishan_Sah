@@ -42,7 +42,7 @@ A self-driving car prototype built using an Arduino microcontroller and sensors 
 
 ## 📜 Certifications
 - **Certificate of Appreciation: Google Prompt Wars** *(Hack2skill)*
-- **Certificate of Participation Codex Hackathon** *(BlockseBlock)*
+- **Certificate of Participation: Codex Hackathon** *(BlockseBlock)*
 - **Certificate of Completion: Google Cloud Gen AI Academy APAC Edition** *(Hack2skill)*
 - **Certificate of Completion: Foundation Course on AI Readiness** *(Indian Institute of Creative Technologies)*
 - **Certificate of Completion: Generate reports with AI research agents** *(Microsoft)*
