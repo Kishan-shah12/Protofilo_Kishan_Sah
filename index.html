@@ -1549,6 +1549,16 @@ document.addEventListener('DOMContentLoaded', () => {
         certPrev.addEventListener('click', () => {
             certContainer.scrollBy({ left: -380, behavior: 'smooth' });
         });
+
+        let scrollDirection = 1;
+        setInterval(() => {
+            if (certContainer.scrollLeft + certContainer.clientWidth >= certContainer.scrollWidth - 10) {
+                scrollDirection = -1;
+            } else if (certContainer.scrollLeft <= 10) {
+                scrollDirection = 1;
+            }
+            certContainer.scrollBy({ left: 380 * scrollDirection, behavior: 'smooth' });
+        }, 5000);
     }
 });
 </script>
