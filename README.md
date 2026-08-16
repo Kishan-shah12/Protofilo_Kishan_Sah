@@ -41,11 +41,13 @@ A self-driving car prototype built using an Arduino microcontroller and sensors 
 ---
 
 ## 📜 Certifications
-- **Google Prompting Essentials** *(Coursera)*
-- **Google AI Essentials** *(Coursera)*
+- **Certificate of Appreciation: Google Prompt Wars** *(Hack2skill)*
+- **Certificate of Participation Codex Hackathon** *(BlockseBlock)*
 - **Certificate of Completion: Google Cloud Gen AI Academy APAC Edition** *(Hack2skill)*
 - **Certificate of Completion: Foundation Course on AI Readiness** *(Indian Institute of Creative Technologies)*
-- **Certificate of Participation: Codex Hackathon** *(BlockseBlock)*
+- **Certificate of Completion: Generate reports with AI research agents** *(Microsoft)*
+- **Google AI Essentials** *(Coursera)*
+- **Google Prompting Essentials** *(Coursera)*
 
 ---
 
