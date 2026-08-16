@@ -34,6 +34,8 @@ DEFAULT: '8px',
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
 <style>
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 :where([class^="ri-"])::before { content: "\f3c2"; }
 body {
 font-family: 'Inter', sans-serif;
@@ -862,8 +864,15 @@ GitHub
 <div class="w-24 h-1 bg-primary mx-auto mb-8"></div>
 <p class="text-gray-600 max-w-2xl mx-auto text-lg">My professional qualifications and continuous learning achievements.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<div class="project-card bg-white rounded-2xl shadow-lg overflow-hidden card-hover-effect">
+<div class="relative group mt-8">
+<button id="cert-prev" class="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg rounded-full w-12 h-12 flex items-center justify-center text-primary hover:bg-gray-50 transition-all opacity-0 group-hover:opacity-100 hidden md:flex cursor-pointer" aria-label="Previous Certificate">
+<i class="ri-arrow-left-s-line ri-2x"></i>
+</button>
+<button id="cert-next" class="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg rounded-full w-12 h-12 flex items-center justify-center text-primary hover:bg-gray-50 transition-all opacity-0 group-hover:opacity-100 hidden md:flex cursor-pointer" aria-label="Next Certificate">
+<i class="ri-arrow-right-s-line ri-2x"></i>
+</button>
+<div id="cert-container" class="flex gap-8 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-8 px-2 hide-scrollbar">
+<div class="project-card min-w-[300px] md:min-w-[350px] snap-center flex-shrink-0 bg-white rounded-2xl shadow-lg overflow-hidden card-hover-effect">
 <div class="h-48 overflow-hidden image-zoom">
 <img src="./promptwarvirtual2.png" alt="Certificate of Appreciation: Google Prompt Wars" class="w-full h-full object-cover object-top">
 </div>
@@ -878,7 +887,7 @@ Verify Credential <i class="ri-arrow-right-line ml-2 transform group-hover:trans
 </a>
 </div>
 </div>
-<div class="project-card bg-white rounded-2xl shadow-lg overflow-hidden card-hover-effect">
+<div class="project-card min-w-[300px] md:min-w-[350px] snap-center flex-shrink-0 bg-white rounded-2xl shadow-lg overflow-hidden card-hover-effect">
 <div class="h-48 overflow-hidden image-zoom">
 <img src="./codex_hackathon.png" alt="Certificate of Participation Codex Hackathon" class="w-full h-full object-cover object-top">
 </div>
@@ -893,7 +902,7 @@ Verify Credential <i class="ri-arrow-right-line ml-2 transform group-hover:trans
 </a>
 </div>
 </div>
-<div class="project-card bg-white rounded-2xl shadow-lg overflow-hidden card-hover-effect">
+<div class="project-card min-w-[300px] md:min-w-[350px] snap-center flex-shrink-0 bg-white rounded-2xl shadow-lg overflow-hidden card-hover-effect">
 <div class="h-48 overflow-hidden image-zoom">
 <img src="./gen_ai_2.png" alt="Google Cloud Gen AI Academy APAC Edition" class="w-full h-full object-cover object-top">
 </div>
@@ -908,7 +917,7 @@ Verify Credential <i class="ri-arrow-right-line ml-2 transform group-hover:trans
 </a>
 </div>
 </div>
-<div class="project-card bg-white rounded-2xl shadow-lg overflow-hidden card-hover-effect">
+<div class="project-card min-w-[300px] md:min-w-[350px] snap-center flex-shrink-0 bg-white rounded-2xl shadow-lg overflow-hidden card-hover-effect">
 <div class="h-48 overflow-hidden image-zoom">
 <img src="./iict.png" alt="Foundation Course on AI Readiness" class="w-full h-full object-cover object-top">
 </div>
@@ -923,7 +932,7 @@ Verify Credential <i class="ri-arrow-right-line ml-2 transform group-hover:trans
 </a>
 </div>
 </div>
-<div class="project-card bg-white rounded-2xl shadow-lg overflow-hidden card-hover-effect">
+<div class="project-card min-w-[300px] md:min-w-[350px] snap-center flex-shrink-0 bg-white rounded-2xl shadow-lg overflow-hidden card-hover-effect">
 <div class="h-48 overflow-hidden image-zoom">
 <img src="./microsoft_applied_skill.png" alt="Certificate of Completion: Generate reports with AI research agents" class="w-full h-full object-cover object-top">
 </div>
@@ -938,7 +947,7 @@ Verify Credential <i class="ri-arrow-right-line ml-2 transform group-hover:trans
 </a>
 </div>
 </div>
-<div class="project-card bg-white rounded-2xl shadow-lg overflow-hidden card-hover-effect">
+<div class="project-card min-w-[300px] md:min-w-[350px] snap-center flex-shrink-0 bg-white rounded-2xl shadow-lg overflow-hidden card-hover-effect">
 <div class="h-48 overflow-hidden image-zoom">
 <img src="./google_ai.png" alt="Google AI Essentials" class="w-full h-full object-cover object-top">
 </div>
@@ -953,7 +962,7 @@ Verify Credential <i class="ri-arrow-right-line ml-2 transform group-hover:trans
 </a>
 </div>
 </div>
-<div class="project-card bg-white rounded-2xl shadow-lg overflow-hidden card-hover-effect">
+<div class="project-card min-w-[300px] md:min-w-[350px] snap-center flex-shrink-0 bg-white rounded-2xl shadow-lg overflow-hidden card-hover-effect">
 <div class="h-48 overflow-hidden image-zoom">
 <img src="./google_prompting.png" alt="Google Prompting Essentials" class="w-full h-full object-cover object-top">
 </div>
@@ -966,6 +975,7 @@ Verify Credential <i class="ri-arrow-right-line ml-2 transform group-hover:trans
 <a href="https://coursera.org/verify/specialization/DCNPGAZOYRBL" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-primary font-semibold hover:text-secondary transition-colors cursor-pointer group">
 Verify Credential <i class="ri-arrow-right-line ml-2 transform group-hover:translate-x-1 transition-transform"></i>
 </a>
+</div>
 </div>
 </div>
 </div>
@@ -1525,6 +1535,21 @@ window.addEventListener('scroll', function() {
 requestTick();
 ticking = false;
 });
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const certContainer = document.getElementById('cert-container');
+    const certPrev = document.getElementById('cert-prev');
+    const certNext = document.getElementById('cert-next');
+    if (certPrev && certNext && certContainer) {
+        certNext.addEventListener('click', () => {
+            certContainer.scrollBy({ left: 380, behavior: 'smooth' });
+        });
+        certPrev.addEventListener('click', () => {
+            certContainer.scrollBy({ left: -380, behavior: 'smooth' });
+        });
+    }
 });
 </script>
 </body>
