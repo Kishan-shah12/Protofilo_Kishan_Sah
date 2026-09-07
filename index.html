@@ -601,7 +601,65 @@ Download Resume
 <button class="filter-btn bg-gray-200 text-gray-700 hover:bg-gray-300 px-4 py-2 !rounded-button font-medium whitespace-nowrap cursor-pointer" data-filter="ai">AI/ML</button>
 </div>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="project-card bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer" data-category="ai">
+<div class="h-48 overflow-hidden image-zoom">
+<img src="./reconai_project.png" alt="ReconAI — AI Finance Controller" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold text-gray-900 mb-3">ReconAI — AI Finance Controller</h3>
+<p class="text-gray-600 mb-4">An autonomous AI financial controller and reconciliation platform designed to match transactions, detect exceptions in real time, and streamline multi-tier ledger audits.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded text-xs">Python</span>
+<span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">TypeScript</span>
+<span class="px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs">HTML</span>
+<span class="px-2 py-1 bg-indigo-100 text-indigo-800 rounded text-xs">CSS</span>
+</div>
+<div class="flex gap-3">
+<a href="https://reconai-gamma.vercel.app" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-primary hover:text-secondary font-medium cursor-pointer">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-external-link-line"></i>
+</div>
+Live Demo
+</a>
+<a href="https://github.com/Kishan-shah12/AI-Finance-Controller" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-gray-600 hover:text-gray-800 font-medium cursor-pointer">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-github-line"></i>
+</div>
+GitHub
+</a>
+</div>
+</div>
+</div>
+<div class="project-card bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer" data-category="web">
+<div class="h-48 overflow-hidden image-zoom">
+<img src="./ayurveda_project.png" alt="AyurvedaDaily — AI Ayurvedic Wellness Companion" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold text-gray-900 mb-3">AyurvedaDaily</h3>
+<p class="text-gray-600 mb-4">A personalized, AI-powered Ayurvedic wellness companion that helps users discover their body constitution (Dosha), tracks daily routines, provides natural remedies, and features a context-aware AI chatbot.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">TypeScript</span>
+<span class="px-2 py-1 bg-green-100 text-green-800 rounded text-xs">JavaScript</span>
+<span class="px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs">HTML</span>
+<span class="px-2 py-1 bg-indigo-100 text-indigo-800 rounded text-xs">CSS</span>
+</div>
+<div class="flex gap-3">
+<a href="https://ayurveda-daily-advisor.vercel.app" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-primary hover:text-secondary font-medium cursor-pointer">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-external-link-line"></i>
+</div>
+Live Demo
+</a>
+<a href="https://github.com/Kishan-shah12/ayurveda-daily-advisor" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-gray-600 hover:text-gray-800 font-medium cursor-pointer">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-github-line"></i>
+</div>
+GitHub
+</a>
+</div>
+</div>
+</div>
 <div class="project-card bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer" data-category="web">
 <div class="h-48 overflow-hidden image-zoom">
 <img src="./fifa_project.png" alt="FIFA World Cup 2026 - Stadium Intelligence Center" class="w-full h-full object-cover object-top">
@@ -1377,7 +1435,7 @@ icon.className = 'ri-menu-line ri-lg';
 <script id="project-filter-script">
 document.addEventListener('DOMContentLoaded', function() {
 const filterBtns = document.querySelectorAll('.filter-btn');
-const projectCards = document.querySelectorAll('.project-card');
+const projectCards = document.querySelectorAll('#project-grid .project-card');
 filterBtns.forEach(btn => {
 btn.addEventListener('click', function() {
 const filter = this.getAttribute('data-filter');

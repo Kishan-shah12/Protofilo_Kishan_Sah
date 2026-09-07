@@ -26,17 +26,35 @@ When I'm not coding, you can find me:
 
 ## 🛠️ Featured Projects
 
+### 💰 ReconAI — AI Finance Controller
+An autonomous AI financial controller and reconciliation platform designed to match transactions, detect exceptions in real time, and streamline multi-tier ledger audits.
+- **Technologies:** Python, TypeScript, HTML, CSS
+- **Live Demo:** [reconai-gamma.vercel.app](https://reconai-gamma.vercel.app)
+- **GitHub Repository:** [AI-Finance-Controller](https://github.com/Kishan-shah12/AI-Finance-Controller)
+
+### 🌿 AyurvedaDaily
+A personalized, AI-powered Ayurvedic wellness companion that helps users discover their body constitution (Dosha), tracks daily health routines, provides natural remedies, and features a context-aware AI chatbot for wellness guidance.
+- **Technologies:** JavaScript, TypeScript, HTML, CSS
+- **Live Demo:** [ayurveda-daily-advisor.vercel.app](https://ayurveda-daily-advisor.vercel.app)
+- **GitHub Repository:** [ayurveda-daily-advisor](https://github.com/Kishan-shah12/ayurveda-daily-advisor)
+
 ### 🛡️ Sentinel: Fraud & Bot Network Investigator
 A real-time data intelligence tool designed to detect, investigate, and analyze fraud and bot networks.
 - **Technologies:** Python, C++, C
+- **Live Demo:** [data-intelligence-tool-omega.vercel.app](https://data-intelligence-tool-omega.vercel.app)
+- **GitHub Repository:** [data-intelligence-tool](https://github.com/Kishan-shah12/data-intelligence-tool)
 
 ### ⚽ FIFA 2026: Stadium Intelligence Center
 A comprehensive intelligence center and dashboard for monitoring stadium metrics, schedules, and operations for the FIFA World Cup 2026.
 - **Technologies:** HTML, CSS, JavaScript
+- **Live Demo:** [smart-stadiums-tournament-reliable.vercel.app](https://smart-stadiums-tournament-reliable.vercel.app)
+- **GitHub Repository:** [Smart-Stadiums-Tournament-Reliable-](https://github.com/Kishan-shah12/Smart-Stadiums-Tournament-Reliable-)
 
 ### 🤖 Arduino-Based Prototype on Self Driving Car
 A self-driving car prototype built using an Arduino microcontroller and sensors to navigate autonomously.
 - **Technologies:** C++, Arduino, IoT
+- **Live Demo:** [LinkedIn Video Showcase](https://www.linkedin.com/posts/kishan-sah-b97a73315_enjoying-with-hobbies-with-making-some-iot-ugcPost-7278105007185367042-sHNU/)
+- **GitHub Repository:** [Arduino-Based-Prototype-on-Self-Driving-Car](https://github.com/Kishan-shah12/Arduino-Based-Prototype-on-Self-Driving-Car)
 
 ---
 
