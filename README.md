@@ -26,6 +26,12 @@ When I'm not coding, you can find me:
 
 ## 🛠️ Featured Projects
 
+### 🛡️ SafePath AI — Offline Safety Net Companion
+An offline-first AI safety net companion that analyzes route safety in real time, provides risk heatmaps, automated check-in timers, and emergency auto-escalation protocols for secure urban navigation.
+- **Technologies:** Python, JavaScript, HTML, CSS
+- **Live Demo:** [safepath-safety-net.vercel.app](https://safepath-safety-net.vercel.app)
+- **GitHub Repository:** [safepath-safety-net](https://github.com/Kishan-shah12/safepath-safety-net)
+
 ### 💰 ReconAI — AI Finance Controller
 An autonomous AI financial controller and reconciliation platform designed to match transactions, detect exceptions in real time, and streamline multi-tier ledger audits.
 - **Technologies:** Python, TypeScript, HTML, CSS
